@@ -19,8 +19,23 @@ class customArray {
         this.custArr.length = this.custArr.length - 1
         return lastValue
     }
+
+    // Supprime le premier élément d'un tableau et renvoie cet élément.
+    shift () {
+        let firstValue = this.custArr[0]
+        let guessArray = []
+        for (let i = 1; i < this.custArr.length; i++) {
+            guessArray[i-1] = this.custArr[i]
+        }
+
+        this.custArr = guessArray
+        return firstValue
+    }
 }
 
-let _customArray = new customArray([404, 505])
-_customArray.push("H2O", "28-01-2006")
+let _customArray = new customArray(["@th3fr3dy", "@github"])
+_customArray.push("@instagram", "@telegram")
 _customArray.pop()
+_customArray.shift()
+
+
