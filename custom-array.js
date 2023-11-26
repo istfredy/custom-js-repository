@@ -23,13 +23,26 @@ class customArray {
     // Supprime le premier élément d'un tableau et renvoie cet élément.
     shift () {
         let firstValue = this.custArr[0]
-        let guessArray = []
+        let shiftArray = []
         for (let i = 1; i < this.custArr.length; i++) {
-            guessArray[i-1] = this.custArr[i]
+            shiftArray[i-1] = this.custArr[i]
         }
 
-        this.custArr = guessArray
+        this.custArr = shiftArray
         return firstValue
+    }
+
+
+    // Ajoute un ou plusieurs éléments au début d'un tableau et retourne le nouveau tableau.
+
+    unshift () {
+        let unshiftArray = []
+        for (let i = 0; i < arguments.length; i++) {
+            unshiftArray[i] = arguments[i]
+        }
+
+        this.custArr = [...unshiftArray, ...this.custArr]
+        return this.custArr
     }
 }
 
@@ -37,5 +50,6 @@ let _customArray = new customArray(["@th3fr3dy", "@github"])
 _customArray.push("@instagram", "@telegram")
 _customArray.pop()
 _customArray.shift()
+_customArray.unshift("@whatsApp", "@Twiter", "@Facebook")
 
-
+console.log(_customArray);
