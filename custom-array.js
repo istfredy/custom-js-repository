@@ -83,14 +83,66 @@ class customArray {
         return false
     }
 
+// 3. Parcourrir dans le tableau
+    // Executer une fonctioon sur chaque element d'un tableau
+
+    forEach (getCallback) {
+        for (let i = 0; i < this.custArr.length; i++) {
+            getCallback(this.custArr[i])
+        }
+    }
+
+    // Retourner un nouveau tableau contenant les éléments du tableau sur lequel on a appliqué une fonction 
+
+    map (getCallback) {
+        let newMapArray = []
+        for (let i = 0; i < this.custArr.length; i++) {
+            newMapArray[i] = getCallback(this.custArr[i])
+        }
+
+        return newMapArray
+    }
+
+// 4. Manipulation d'un tableau
+    // Extraire une partie d'un tableau
+
 }
 
-let _customArray = new customArray(["@th3fr3dy", "@github"])
+
+let _customArray = new customArray(["@th3fr3dy", "@github", "@instagram", "@telegram"])
+
+
+
+/* Test....
+
+... push test ...
 _customArray.push("@instagram", "@telegram")
+
+... pop test ...
 _customArray.pop()
+
+... shift test ...
 _customArray.shift()
+
+... unshift test ...
 _customArray.unshift("@whatsApp", "@Twiter", "@Facebook")
 
+... includes test ...
 console.log(_customArray.includes("@github"))
 
+... indexOf test ...
+console.log(_customArray.indexOf("@github"))
+
+... forEach test ...
+_customArray.forEach((element) => {
+    console.log(element)
+})
+
+... map test ...
+console.log( _customArray.map((element) => element + "ok"))
+
+... check changes ...
 console.log(_customArray);
+
+
+*/

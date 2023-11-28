@@ -17,4 +17,9 @@ methodes du protoype **Array** en *JavaScript* :
 
 - La methode *indexOf()* : Retourne l'indice de la premiere occurence d'un element s'il est present et -1 s'il ne l'est pas.
 - La methode *LastindexOf()* : Retourne l'indice de la derniere occurence d'un element s'il est present et -1 dans le cas contraire.
-- La methode *includes()* : Retourne *true* si l'element est present et *false* dans le cas contraire.fr
+- La methode *includes()* : Retourne *true* si l'element est present et *false* dans le cas contraire.
+
+### 3. Parcourir dans le tableau
+
+- La methode *forEach()* : Execute une fonction passé en paramettre sur chaque element d'un tableau.
+- La methode *map()* : Retourne un nouveau tableau en executant une fonction passé en paramettre sur chaque element d'un tableau.
